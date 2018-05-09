@@ -17,6 +17,10 @@
               
 }
           
+          ul.a {
+    list-style-position: outside;
+}
+          
 div.leftcolumn {   
     float: left;
     width: 75%;
@@ -97,6 +101,12 @@ ul.sidenav li a:hover:not(.active) {
           
 
 @media screen and (max-width: 600px) {
+    
+     ul.a {
+    list-style-position: inside;
+}
+    
+    
     ul.sidenav li a {
         text-align: center;
         float: none;
@@ -212,9 +222,16 @@ div.card {
       
   <div class="rightcolumn">
     <div class="card">
-      <h2>coś coś tam</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h4>Do zrobienia:</h4>
+        
+      <ul class="a">
+  <li>Galeria</li>
+  <li>Java</li>
+  <li>Strony</li>
+</ul>
+        
+        
+        <div class="fakeimg" style="height:100px;">Image</div>
       </div>
       
       
