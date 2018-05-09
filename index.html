@@ -34,6 +34,7 @@ div.fakeimg {
 /* Add a card effect for articles */
 div.card {
     background-color: white;
+    text-align: center;
     padding: 20px;
     margin-top: 20px;
 }
@@ -106,10 +107,60 @@ div.ex2 {
     </div>
     <div class="card">
       <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      
+        <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+<div class="row">
+<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+<div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+</div>
+
+<!-- Columns are always 50% wide, on mobile and desktop -->
+<div class="row">
+<div class="col-xs-6">.col-xs-6</div>
+<div class="col-xs-6">.col-xs-6</div>
+</div>
+
+<h1>Hello, world!</h1>
+<!-- Indicates a successful or positive action -->
+<p>
+<button type="button" class="btn btn-primary btn-lg">Large button</button>
+<button type="button" class="btn btn-default btn-lg">Large button</button>
+</p>
+
+<button type="button" class="btn btn-success btn-lg">Success</button>
+<button type="button" class="btn btn-success " ONCLICK="alert ('Kliknięto przycisk')">Success</button>
+<div class="show">Pokaz</div>
+<div class="hidden">Ukryj</div>
+
+
+
+
+<form>
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+</div>
+<div class="form-group">
+<label for="exampleInputFile">File input</label>
+<input type="file" id="exampleInputFile">
+<p class="help-block">Example block-level help text here.</p>
+</div>
+<div class="checkbox">
+<label>
+<input type="checkbox"> Check me out
+</label>
+</div>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+        
+        
+        
+        
     </div>
   </div>
   <div class="rightcolumn">
@@ -130,83 +181,7 @@ div.ex2 {
     </div>
   </div>
 </div>
-          
-          
-      
-      
 
-
-      
-<!-- Stack the columns on mobile by making one full-width and the other half-width -->
-<div class="row">
-  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-</div>
-      
-    
-      
-      
-          
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-      
-
-<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-<div class="row">
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
-</div>
-
-<!-- Columns are always 50% wide, on mobile and desktop -->
-<div class="row">
-  <div class="col-xs-6">.col-xs-6</div>
-  <div class="col-xs-6">.col-xs-6</div>
-</div>
-      
-    <h1>Hello, world!</h1>
-      <!-- Indicates a successful or positive action -->
-      <p>
-  <button type="button" class="btn btn-primary btn-lg">Large button</button>
-  <button type="button" class="btn btn-default btn-lg">Large button</button>
-</p>
-      
-<button type="button" class="btn btn-success btn-lg">Success</button>
-      <button type="button" class="btn btn-success " ONCLICK="alert ('Kliknięto przycisk')">Success</button>
-<div class="show">Pokaz</div>
-<div class="hidden">Ukryj</div>
-      
-      
-      
-      
-      <form>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
       
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
