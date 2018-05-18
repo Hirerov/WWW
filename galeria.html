@@ -314,25 +314,31 @@ div.desc {
       
        <div class="leftcolumn">
     <div class="card">
-      <h2>Witamy!</h2>
-      <h5>PRZEPRASZAMY STRONA W BUDOWIE</h5>
-        <br>
-        
-     <div class="row">
+
+        <div style="text-align:center">
+  <h2>Galeria zdjęć</h2>
+  <p>Aby powiększyć kliknij w zdjęcie poniżej:</p>
+</div>
+<div class="row">
   <div class="column">
-    <img src="12.jpg" alt="Nature" onclick="openImg(this);">
+    <img src="12.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="13.jpg" alt="Fjords" onclick="openImg(this);">
+    <img src="13.jpg" alt="Fjords" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="14.jpg" alt="Mountains" onclick="openImg(this);">
+    <img src="14.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="15.jpg" alt="Lights" onclick="openImg(this);">
+    <img src="15.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
   </div>
 </div>
 
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:100%">
+  <div id="imgtext"></div>
+</div>
 <!-- The expanding image container -->
 <div class="container">
   <!-- Close the image -->
@@ -344,6 +350,7 @@ div.desc {
   <!-- Image text -->
   <div id="imgtext"></div>
 </div>
+        <h4></h4>
         
       <p>WRÓĆ DO STR. GŁÓWNEJ: 
         <a href="index.html"><button type="button" class="btn btn-success btn-lg" onclick="alert ('Przekierowanie do zakładki: strona główna')">STRONA GŁÓWNA</button>
@@ -427,7 +434,15 @@ div.desc {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
           
-
+<script>
+function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "block";
+}
+</script>
       
       
   </body>
