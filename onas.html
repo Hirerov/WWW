@@ -4,180 +4,123 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>O nas</title>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-      
+
       <style> 
-          body {background-color: #f1f1f1;}
           
-          img {
-    max-width: 100%;
-    height: auto;
-              
-}
-          
-          ul.a {
-    list-style-position: outside;
-              text-align: left;
-}
-          
-div.leftcolumn {   
-    float: left;
-    width: 75%;
-    background-color: #f1f1f1;
-}
-
-
-div.rightcolumn {
+         .column {
     float: left;
     width: 25%;
-    background-color: #f1f1f1;
-    padding-left: 0px;
-    padding-right: 30px;
-    padding-bottom: 30px;
+    padding: 10px;
 }
 
-
-div.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+/* Style the images inside the grid */
+.column img {
+    opacity: 0.8; 
+    cursor: pointer; 
 }
 
-
-          div.card {
-    background-color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 30px;
-    grid-gap: 10px;
-    
-} 
-          
-        div.header {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 30px;
-    text-align: center;
-    background-color: #f1f1f1;
+.column img:hover {
+    opacity: 1;
 }
-     
 
-div.row:after {
+/* Clear floats after the columns */
+.row:after {
     content: "";
     display: table;
-    background-color: #f1f1f1;
-    clear: both;  
-}   
-          
-         
-          ul.sidenav {
-    list-style-type: none;
-    padding: 0;
-    width: 100%;
-    background-color: #f1f1f1;
+    clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
     position: relative;
-    height: auto;
-    overflow: auto;             
+    display: none;
 }
 
-ul.sidenav li a {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    float: left;
-    padding: 15px;
-    
-}
- 
-ul.sidenav li a.active {
-    background-color: #4CAF50;
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
     color: white;
-    
+    font-size: 20px;
 }
 
-ul.sidenav li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-}         
-          
-
-@media screen and (max-width: 600px) {
-    
-     ul.a {
-    list-style-position: inside;
-}
-    
-    
-    ul.sidenav li a {
-        text-align: center;
-        float: none;
-        margin-top: 5px;
-        margin-right: 20px;
-        margin-left: 20px;
-        padding: 10px;
-    }
-    
-    
-    div.header {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px;
-    text-align: center;
-    background-color: #559;
+/* Closable button inside the image */
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    color: black;
+    font-size: 60px;
+    cursor: pointer;
 }
 
-    
-    div.leftcolumn {   
-    float: none;
-    width: auto;
-    margin-right:auto;
-    margin-left: auto;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-          
-    div.rightcolumn {
-    margin-right: auto;
-    margin:auto;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: auto;
-    text-align: center;
-    float: none;
-    width: auto;
-    background-color: #f1f1f1;
+h2 {
+  margin: 20px auto 80px;
+  font-size: 38px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }
 
-div.card {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px;
-    text-align: center;
-    float: none;
-    height: auto;
-} 
+details p {
+  color: #96999d;
+  font-weight: 300;
 }
-          
-          div.carousel-inner
-          {
-              1_cr.jpg=2_m.jpg;
-              
-          }
-          
-          img.d-block w-100
-          {
-              src="1_m.jpg";
-              width:900;
-              height:300;
-              /*alt="First slide";*/
-          }
+
+summary {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* removed outline as for codepen only
+  don't remove focus on elements
+  it's bad accessibility
+  don't be _that_ guy
+*/
+summary:focus {
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  color: rebeccapurple;
+  font-family: "Font Awesome 5 Free";
+  font-size: 15px;
+  font-style: normal;
+  font-variant-caps: normal;
+  -webkit-font-variant-ligatures: normal;
+          font-variant-ligatures: normal;
+  font-weight: 900;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f078";
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  transition: .3s ease;
+}
+
+
 </style>
 </head>
+    
+
+    
+    
     
     
     
@@ -189,6 +132,7 @@ div.card {
     
     
   <body>
+      
       <div class="header">
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" >
   <ol class="carousel-indicators" >
@@ -234,36 +178,29 @@ div.card {
       </div>
           
   <ul class="sidenav">
-  <li><h5><a class="active" href="index.html">Strona główna</a></h5></li>
+  <li><h5><a  href="index.html">Strona główna</a></h5></li>
   <li><h5><a href="galeria.html">Galeria</a></h5></li>
-  <li><h5><a href="oferta.html">Oferta (czyt. cennik)</a></h5></li> 
+  <li><h5><a href="oferta.html">Oferta</a></h5></li> 
   <li><h5><a href="rezerwacja.html">Rezerwacja</a></h5></li>
-  <li><h5><a href="onas.html">O nas</a></h5></li>
+  <li><h5><a class="active" href="onas.html">O nas</a></h5></li>
   <li><h5><a href="kontakt.html">Kontakt</a></h5></li>
 </ul>
 </div>
       
        <div class="leftcolumn">
     <div class="card">
-      <h2>Szanowni Państwo!</h2>
-      <h5>Już od ponad 10 lat zajmujemy się prowadzeniem biura podróży. Co roku dokładamy wszelkich starań, aby Pańtwo z wytęsknieniem wyczekiwali nazych wycieczek. Jest to nielada wyzwanie, jednak przy tak licznym zainteresowaniu sprawia, że z każdym rokiem oferta jest rozszerzana. To wszystko takze dzięki Państwu!</h5>
-        <h2></h2>
-        
-        Wszystko zaczęło się od pierwszej podróży w góry. Był kwiecień, świetna pogoda i grupa znajomych. Wtedy rozpoczęliśmy przygodę z podróżowaniem, a szczególnie z planowaniem podróży. Bo to właśnie jest niesamowite, kiedy siedzisz w mieszkaniu i planujesz, a jakiś czas później jesteś już na miejscu, które oglądałeś tylko z GoogleView. To była nasza inspiracja, pomysły wcielane w życie. 
-          <h2></h2>
-        Dokładamy wszelkich starań, aby wakacje trwały cały rok! 
-          <h2></h2>
-        
-<div class="card-group">
+      <h1>Szanowni Państwo!</h1><br>
+    
+      Już od ponad 10 lat zajmujemy się prowadzeniem biura podróży. Co roku dokładamy wszelkich starań, aby Pańtwo z wytęsknieniem wyczekiwali nazych wycieczek. Jest to nielada wyzwanie, jednak przy tak licznym zainteresowaniu sprawia, że z każdym rokiem oferta jest rozszerzana. To wszystko takze dzięki Państwu!<br><br>
+    
+        <div class="card-group">
   <div class="card">
     <img class="card-img-top" src="10_kon3.jpg" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Góry, kwiecień 2007</h5>
         <p class="card-text">Pierwszy wyjazd </p>
     </div>
-    <div class="card-footer">
-      
-    </div>
+
   </div>
   <div class="card">
     <img class="card-img-top" src="10_kon.jpg" alt="Card image cap">
@@ -271,9 +208,7 @@ div.card {
       <h5 class="card-title">Sierpień 2007</h5>
       <p class="card-text">Planowanie pierwszej wycieczki</p>
     </div>
-    <div class="card-footer">
 
-    </div>
   </div>
   <div class="card">
     <img class="card-img-top" src="10_kon2.jpg" height="100" alt="Card image cap">
@@ -281,22 +216,45 @@ div.card {
       <h5 class="card-title">Czerwiec 2008</h5>
       <p class="card-text">Pierwsza zorganizowana wycieczka</p>
     </div>
-    <div class="card-footer">
-    
-    </div>
-  </div>
-</div>
-        
-        
-        <br>
-      <p>
-        <a href="index.html"><button type="button" class="btn btn-success btn-lg" onclick="alert ('Przekierowanie do zakładki: strona główna')">STRONA GŁÓWNA</button>
-            <br>
 
-        </a>
-        </p>
-    </div>
   </div>
+</div><br>
+        
+        Wszystko zaczęło się od pierwszej podróży w góry. Był kwiecień, świetna pogoda i grupa znajomych. Wtedy rozpoczęliśmy przygodę z podróżowaniem, a szczególnie z planowaniem podróży. Bo to właśnie jest niesamowite, kiedy siedzisz w mieszkaniu i planujesz, a jakiś czas później jesteś już na miejscu, które oglądałeś tylko z GoogleView. To było naszą inspiracją, pomysły wcielane w życie. 
+          <br><br> 
+        Dokładamy wszelkich starań, aby wakacje trwały cały rok! 
+          
+     <br><br> <br><br>
+  
+      <link rel="stylesheet" href="css/style.css">
+        
+        
+        
+        <details>
+  <summary>Ile Państwa firma istnieje na rynku?</summary>
+  <p>W kwietniu 2017 minęło dokładnie 10 lat od rozpoczęcia naszej działalności.</p>
+</details>
+
+<details>
+  <summary>Słyszałem od znajomych, że można u Państwa dostać rabat, gdy mam specjalny kod.</summary>
+  <p>Dokładnie. Każda osoba, która weźmie udział w naszych podróżach dostaje kod na 10% rabatu na kolejną wycieczkę*.
+</p>
+    
+      <p><font size="2">* kod nie może wykorzystać osoba, która go otrzymała; z rabatu można skorzystać tylko raz </font></p>
+</details>
+
+<details>
+  <summary>Mam wątpliwośi do oferty, jak z Państwem można się skontaktować?</summary>
+  <p>Jesteśmy gotowi na rozwiązanie Państwa problemów i wątpliwości. Zapraszamy do zakładki: kontakt.</p>
+</details>
+        
+        
+
+
+    </div>
+    
+</div>
+
 
 <div class="rightcolumn">
     <div class="card">
