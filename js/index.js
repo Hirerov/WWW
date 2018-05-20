@@ -89,3 +89,92 @@ pauseButton.addEventListener("click", function() {
     pauseButton.innerHTML = "Wznów";
   }
 })
+
+function startTime() {
+    var today = new Date();
+    var y = today.getFullYear();
+    var a2 = today.getMonth()	
+    var d = today.getDate();
+
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var n = today.getMilliseconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    n = checkTime(n);
+    
+    var weekday = new Array(7);
+    weekday[0] = "Niedziela";
+    weekday[1] = "Poniedziałek";
+    weekday[2] = "Wtorek";
+    weekday[3] = "Środa";
+    weekday[4] = "Czwartek";
+    weekday[5] = "Piątek";
+    weekday[6] = "Sobota";
+    var a1 = weekday[today.getDay()];
+
+    
+    document.getElementById('time').innerHTML =
+    a1+"  " + d +"-"+ a2 + "-" +y+ "   " + h + ":" + m + ":" + s + ":" + n;
+    var t = setTimeout(startTime, 1);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+
+function my1() {
+    document.getElementById("browser").innerHTML =
+navigator.userAgent;
+}
+
+function my2() {
+document.getElementById("sys").innerHTML = navigator.platform;
+}
+
+function my3() {
+document.getElementById("lang").innerHTML =
+navigator.language;
+}
+
+function my4() {
+    
+    var tak1 = new Array(2);
+    tak1[true] = "tak";
+    tak1[false] = "nie";
+    var a11 = tak1[navigator.cookieEnabled];
+    
+    document.getElementById("cias").innerHTML = a11;
+    
+    
+}
+
+function my5() {
+
+    
+    var tak1 = new Array(2);
+    tak1[true] = "tak";
+    tak1[false] = "nie";
+    var a11 = tak1[navigator.javaEnabled()];
+    
+    document.getElementById("acjav").innerHTML = a11;
+}
+
+function my6() {
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+var x = document.getElementById("sizebrow");
+x.innerHTML = "Rozmiar okna przeglądarki to: " + w + "x" + h + ".";
+    
+}
+
+
+
